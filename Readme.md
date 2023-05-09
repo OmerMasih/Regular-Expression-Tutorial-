@@ -37,4 +37,14 @@ The s? makes the s in https optional, and the :\/\/ is escaped with backslashes 
 
 The second component of the regular expression is the domain name. The domain name is a string of alphanumeric characters, dots, and hyphens. The \d is a shorthand character class that matches any digit character, and the a-z matches any lowercase letter. This component is also enclosed within a capturing group.
 
-The regular expression used to match the domain name is:
+The regular expression used to match the domain name is: ([\da-z\.-]+)
+
+The `+` quantifier matches one or more characters in the group, and the `.` and `-` are escaped with backslashes to match the literal characters.
+
+# Top-Level-Domain
+
+The third component of the regular expression is the top-level domain (TLD). The TLD is the last part of the domain name and consists of a string of lowercase letters. The `{2,6}` quantifier matches between 2 and 6 characters in the group, which is the standard length for TLDs.
+
+The regular expression used to match the TLD is:([a-z\.]{2,6})
+
+The `\.` is used to match the literal dot character, and the {2,6} quantifier matches between 2 and 6 characters.

@@ -22,8 +22,6 @@ In this tutorial, we will break down each component of the regular expression to
 - [Top-Level-Domain](#top-level-domain)
 - [Path](#path)
 - [Query-Parameters](#query-parameters)
-- [Conclusion](#conclusion)
-- [About-Author](#about-author)
 
 # Protocol
 
@@ -47,4 +45,14 @@ The third component of the regular expression is the top-level domain (TLD). The
 
 The regular expression used to match the TLD is:([a-z\.]{2,6})
 
-The `\.` is used to match the literal dot character, and the {2,6} quantifier matches between 2 and 6 characters.
+The `\.` is used to match the literal dot character, and the `{2,6}` quantifier matches between 2 and 6 characters.
+
+# Path
+
+The fourth component of the regular expression is the path. The path is optional and can contain any combination of alphanumeric characters, dots, hyphens, forward slashes, and spaces. This component is also enclosed within a capturing group and is followed by the `*` quantifier, which matches 0 or more characters.
+
+# Query-Parameters
+
+The regular expression used to match the path is: ([\/\w \.-]_)_
+
+The `\/` matches the literal forward slash character, and the `\w

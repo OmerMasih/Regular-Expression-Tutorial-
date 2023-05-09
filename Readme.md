@@ -56,3 +56,7 @@ The fourth component of the regular expression is the path. The path is optional
 The regular expression used to match the path is: ([\/\w \.-]_)_
 
 The `\/` matches the literal forward slash character, and the `\w
+
+[Link Demo from Gist](https://gist.github.com/OmerMasih/8f86bda69bad60c8c087e0dc6ebeb0d6)
+
+# © 2023 Masihullah Omer
